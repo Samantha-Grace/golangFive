@@ -1,14 +1,31 @@
 package main
 
 import (
+	"bufio"
 	"doctorapp/eliza/doctor"
 	"fmt"
+	"os"
+	"strings"
 )
 
 func main() {
-	var whatToSay string
+	reader := bufio.NewReader(os.Stdin)
 
-	whatToSay = doctor.Intro()
+	whatToSay := doctor.Intro()
 
 	fmt.Println(whatToSay)
+
+	for {
+		fmt.Print("-> ")
+		userInput, _ := reader.ReadString('\n')
+
+		userInput = strings.Replace(userInput, "\r\n", "", -1)
+		userInput = strings.Replace(userInput, "\n", "", -1)
+
+		if userInput == "quit" {
+			break
+		} else {
+			fmt.Println(doctor.Response(userInput))
+		}
+	}
 }
