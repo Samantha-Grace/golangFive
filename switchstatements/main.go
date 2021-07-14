@@ -10,7 +10,17 @@ import (
 func main() {
 
 	rand.Seed(time.Now().Unix())
-	dow := rand.Intn(7) + 1
 
-	fmt.Println("day", dow)
+	//fmt.Println("day", dow)
+
+	result := ""
+	switch dow := rand.Intn(7) + 1; dow {
+	case 1:
+		result = "It's Sunday"
+	case 2:
+		result = "It's Monday"
+	default:
+		result = "It's another day"
+	}
+	fmt.Println(result)
 }
