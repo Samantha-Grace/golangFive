@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func second() {
 
 	rand.Seed(time.Now().Unix())
 
