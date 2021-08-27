@@ -13,10 +13,24 @@ func main() {
 	}
 	query := args[0]
 
-	dict := map[string]string{}
+	dict := map[string]string{
+		"good":    "kotu",
+		"great":   "harika",
+		"perfect": "mukemmel",
+	}
 
-	// english := [string]{"good", "great", "perfect"}
-	// turkish := [string]{"iyi", "harika", "mükemmel"}
+	dict["up"] = "yukari"
+	dict["down"] = "asagi"
+
+	for k, v := range dict {
+		fmt.Printf("%q means %#v\n", k, v)
+	}
+
+	if value, ok := dict[query]; ok {
+		fmt.Printf("%q means %#v\n", query, value)
+		return
+	}
+	fmt.Printf("%q not found.\n", query)
 
 	value := dict[query]
 	fmt.Printf("%q means %#v\n)", query, value)
