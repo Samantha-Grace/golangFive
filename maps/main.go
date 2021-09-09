@@ -21,10 +21,16 @@ func main() {
 
 	dict["up"] = "yukari"
 	dict["down"] = "asagi"
+	dict["good"] = "iyi"
+	dict["mistake"] = ""
 
-	for k, v := range dict {
-		fmt.Printf("%q means %#v\n", k, v)
-	}
+	// copied := map[string]string{"down":"asagi", "good":"iyi", "great":"harika", "mistake":"", "perfect":"mukemmel", "up":"yukari"}
+	// "perfect" means "mukemmel"
+
+	// fmt.Printf("%#v\n", dict)
+	// for k, v := range dict {
+	// 	fmt.Printf("%q means %#v\n", k, v)
+	// }
 
 	if value, ok := dict[query]; ok {
 		fmt.Printf("%q means %#v\n", query, value)
