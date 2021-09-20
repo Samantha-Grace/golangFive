@@ -1,13 +1,12 @@
 // DC udem go prog lang crash course
 package main
 
-import "fmt"
-
 // aggregate types (assar, struct)
 // reference types (pointers, slices, maps, functions, channels)
 // interface type
 
-// // array
+//array
+
 // func main() {
 // 	var myStrings [3]string
 
@@ -18,13 +17,21 @@ import "fmt"
 // 	fmt.Println("1st element is ", myStrings[0])
 // }
 
-// struct
+//struct
+
+type Car struct {
+	NumberOfTires int
+	Luxury        bool
+	Bucketseats   bool
+	Make          string
+	Model         string
+	Year          int
+}
+
 func main() {
-	var myStrings [3]string
+	myCar := Car
 
-	myStrings[0] = "zero"
-	myStrings[1] = "one"
-	myStrings[2] = "two"
-
-	fmt.Println("1st element is ", myStrings[0])
+	myCar.NumberOfTires = 4
+	myCar.Luxury = false
+	myCar.B
 }
