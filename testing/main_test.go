@@ -10,13 +10,13 @@ func TestCalculate(t *testing.T) {
 
 func TestTableCalculate(t *testing.T) {
 	var tests = []struct {
-input intexpected int
+		input    int
+		expected int
 	}{
 		{2, 4},
 		{-1, 1},
 		{0, 2},
-		{99999, 100001}
-
+		{99999, 100001},
 	}
 	for _, test := range tests {
 		if output := Calculate(test.input); output != test.expected {
