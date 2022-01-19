@@ -1,0 +1,15 @@
+While arrays keep all the elements in the same block of memory, next to each other,
+linked lists can contain elements scattered around memory, by storing a pointer to the next element.
+
+array - indexed
+linked list: start with the head and go through
+
+Methods:
+Append(t) adds an Item t to the end of the linked list
+Insert(i, t) adds an Item t at position i
+RemoveAt(i) removes a node at position i
+IndexOf() returns the position of the Item t
+IsEmpty() returns true if the list is empty
+Size() returns the linked list size
+String() returns a string representation of the list
+Head() returns the first node, so we can iterate on it
