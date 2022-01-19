@@ -1,0 +1,19 @@
+//Basic for loop
+for i:=0; i<=n; i++{
+  //some statements
+}
+// While loop
+i:=0
+for i<=n{
+  // some statements
+  i++
+}
+// Infinite loop
+for {
+  // some statements
+}
+// Other ways to define the loop
+i:=0
+for ; i<n; i+=10{
+  // some statements
+}
