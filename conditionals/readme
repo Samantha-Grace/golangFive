@@ -1,0 +1,7 @@
+if condition {
+  // some statements
+} else if condition {
+  // some statements
+} else {
+  // some statement
+}

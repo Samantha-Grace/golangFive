@@ -1,0 +1,3 @@
+func <identifier> (<parameters>) <return type> {
+  // operation
+}
