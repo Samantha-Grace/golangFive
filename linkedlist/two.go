@@ -1,19 +1,41 @@
-package main
+// package main
 
-import (
-	"container/list"
-	"fmt"
-)
+// import "fmt"
 
-// define linked list
-func two() {
-	fmt.Println("This is a linked list")
-	mylist := list.New()
-	mylist.PushBack(1)
-	mylist.PushFront(2)
-	// we now have a linked list with '1' at the back of the list
-	// and '2' at the front of the list.
-}
+// type LinkedList struct {
+// 	num int
+// }
+
+// func (ll *LinkedList) add(i int) {
+// 	ll.num = i
+// }
+
+// func main() {
+// 	num := 7
+// 	ll := LinkedList{num: num}
+// 	fmt.Println(ll.num)
+// 	ll.add(4)
+// 	fmt.Println(ll.num)
+
+// 	fmt.Println(num)  //print 4 in previous way
+// }
+
+// package main
+
+// import (
+// 	"container/list"
+// 	"fmt"
+// )
+
+// // define linked list
+// func two() {
+// 	fmt.Println("This is a linked list")
+// 	mylist := list.New()
+// 	mylist.PushBack(1)
+// 	mylist.PushFront(2)
+// 	// we now have a linked list with '1' at the back of the list
+// 	// and '2' at the front of the list.
+// }
 
 // import (
 // 	"container/list"
