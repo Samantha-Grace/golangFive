@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //maps are keys and values - look up key to get value
 // use make keyworkd
 func main() {
@@ -12,4 +14,16 @@ func main() {
 	intMap["three"] = 3
 	intMap["four"] = 4
 	intMap["five"] = 5
+
+	//maps are not sorted,  you cannot iterate over your map (below always returns random order)
+	for key, value := range intMap {
+		fmt.Println(key, value)
+	}
+
+	//now lets delete an element
+	delete(intMap, "two")
+
+	for key, value := range intMap {
+		fmt.Println(key, value)
+	}
 }
