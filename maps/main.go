@@ -30,4 +30,10 @@ func main() {
 	} else {
 		fmt.Println(el, "is not in map")
 	}
+	// how to change the value of an element
+	intMap["two"] = 4
+	// this will overwrite the value of index two
+	fmt.Println(intMap)
+	// prints out: map[four:4 five:5 one:1 three:3]
+
 }
