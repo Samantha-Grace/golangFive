@@ -28,3 +28,7 @@ func changeValueOfPointer(num *int) {
 	// change the value of num to 20
 	*num = 25
 }
+
+// when you want a reference to a pointer, you prepend  the ampersand (&)
+// when you want to get the value of a pointer and change it, you prepend the pointer with an asterisk (*)
+// aka when you want to dereference a pointer, you prepend the asterisk (*)
