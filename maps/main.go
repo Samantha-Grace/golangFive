@@ -20,10 +20,14 @@ func main() {
 		fmt.Println(key, value)
 	}
 
-	//now lets delete an element
+	//now lets delete
 	delete(intMap, "two")
 
-	for key, value := range intMap {
-		fmt.Println(key, value)
+	// test to see if something exists in a map
+	el, ok := intMap["two"]
+	if ok {
+		fmt.Println(el, "is in map")
+	} else {
+		fmt.Println(el, "is not in map")
 	}
 }
