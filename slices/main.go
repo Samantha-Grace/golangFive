@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	var animals []string
@@ -45,4 +48,36 @@ func main() {
 
 	fmt.Println("The slice is", len(animals), "elements long")
 	// Prints out: The slice is 4 elements long
+
+	fmt.Println("Is the slice empty?", animals == nil)
+	// Prints out: Is the slice empty? false
+
+	fmt.Println("Is it sorted?", sort.StringsAreSorted(animals))
+	// Prints out: Is it sorted? false
+
+	//  Now sort a slice of strings
+	sort.Strings(animals)
+	fmt.Println("Is it sorted NOW?", sort.StringsAreSorted(animals))
+	fmt.Println(animals)
+	// Prints out: Is it sorted NOW? true [bird cat dog fish]
+
+	animals = DeleteFromSlice(animals, 1)
+	fmt.Println(animals)
+	// Prints out: [bird cat fish]
+}
+
+//How to get rid of a single item in the slice
+// add parameters, slice we will call 'a', it is a slice of strong, and index to delete we will call 'i' an int
+//
+func DeleteFromSlice(a []string, i int) []string {
+	// delete an element from a slice, by an index.  Remove element from index i from a
+	a[i] = a[len(a)-1]
+	// this copies the last element in slice to the index that we are passing.
+	// then we erase the last element - using below syntax
+	// the length of slice animals, minus one, is equal to nothing
+	a[len(a)-1] = ""
+	// truncate the slice by deleteing that last element
+	a = a[:len(a)-1]
+	// give return type in the top part of the func
+	return a
 }
