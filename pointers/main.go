@@ -16,11 +16,15 @@ func main() {
 
 	fmt.Println("X is now", x) // prints out: X is now 20
 
+	// pass in a reference to x
+	changeValueOfPointer(&x)
+
+	fmt.Println("After func call, X is now", x) // prints out: X is now 25
+
 }
 
-// func main() {
-// 	var myInt int
-// 	myInt = 10
-
-// 	fmt.Println(myInt)
-//    }
+// create a new function that takes a parameter names num that is a pointer of type int and doesn't return anything
+func changeValueOfPointer(num *int) {
+	// change the value of num to 20
+	*num = 25
+}
